@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices - LearnCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="lc-header">
+    <a href="index.html" class="lc-logo">Learn<span>Code</span></a>
+
+    <nav class="lc-nav">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html">Cours</a>
+        <a href="exercices.html" class="active">Exercices</a>
+        <a href="premium.html">Premium</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+    <p>ENTRAÎNEMENT PRATIQUE</p>
+    <h1>Exercices de programmation</h1>
+    <p>
+        Entraînez-vous avec des exercices progressifs
+        pour améliorer vos compétences en développement web.
+    </p>
+</section>
+
+<main class="lesson-content">
+
+    <section>
+        <h2>Comment utiliser cette page ?</h2>
+        <p>
+            Lisez chaque exercice, essayez de le résoudre
+            vous-même, puis ouvrez la correction pour comparer
+            votre réponse.
+        </p>
+
+        <div class="lesson-note">
+            Conseil : essayez toujours de résoudre l'exercice
+            avant de regarder la correction.
+        </div>
+    </section>
+
+    <!-- HTML -->
+    <section>
+        <h2>Partie 1 : Exercices HTML</h2>
+        <p>Objectif : apprendre à structurer une page web.</p>
+
+        <article class="exercise-card">
+            <h3>Exercice HTML 1 : Premier titre</h3>
+            <p>
+                Crée une page HTML contenant un titre principal
+                qui affiche « Bienvenue sur LearnCode ».
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>&lt;h1&gt;Bienvenue sur LearnCode&lt;/h1&gt;</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice HTML 2 : Présentation</h3>
+            <p>
+                Crée un titre « À propos de moi » et un paragraphe
+                qui présente brièvement un étudiant.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>&lt;h2&gt;À propos de moi&lt;/h2&gt;
+&lt;p&gt;Je suis étudiant et j'apprends
+le développement web.&lt;/p&gt;</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice HTML 3 : Liste</h3>
+            <p>
+                Crée une liste contenant HTML, CSS et JavaScript.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice HTML 4 : Lien</h3>
+            <p>
+                Crée un lien qui permet de visiter le site
+                officiel de Google.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>&lt;a href="https://www.google.com"&gt;
+    Visiter Google
+&lt;/a&gt;</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice HTML 5 : Formulaire</h3>
+            <p>
+                Crée un formulaire contenant un champ nom,
+                un champ email et un bouton Envoyer.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>&lt;form&gt;
+    &lt;label for="nom"&gt;Nom&lt;/label&gt;
+    &lt;input type="text" id="nom"
+    name="nom" required&gt;
+
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email"
+    name="email" required&gt;
+
+    &lt;button type="submit"&gt;
+        Envoyer
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </details>
+        </article>
+    </section>
+
+    <!-- CSS -->
+    <section>
+        <h2>Partie 2 : Exercices CSS</h2>
+        <p>Objectif : apprendre à styliser les pages web.</p>
+
+        <article class="exercise-card">
+            <h3>Exercice CSS 1 : Couleur du texte</h3>
+            <p>
+                Mets tous les titres h1 en bleu.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>h1 {
+    color: blue;
+}</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice CSS 2 : Hover</h3>
+            <p>
+                Crée un bouton qui devient vert lorsque
+                le pointeur passe dessus.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>button {
+    background: blue;
+    color: white;
+}
+
+button:hover {
+    background: green;
+}</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice CSS 3 : Flexbox</h3>
+            <p>
+                Aligne trois cartes horizontalement avec
+                un espace de 20px.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>.container {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice CSS 4 : Grid</h3>
+            <p>
+                Crée une grille de trois colonnes de même largeur.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>.container {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 20px;
+}</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice CSS 5 : Responsive</h3>
+            <p>
+                Sur un écran de 600px ou moins, affiche
+                les cartes verticalement.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}</code></pre>
+            </details>
+        </article>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <section>
+        <h2>Partie 3 : Exercices JavaScript</h2>
+        <p>Objectif : apprendre les bases de la programmation.</p>
+
+        <article class="exercise-card">
+            <h3>Exercice JavaScript 1 : Variables</h3>
+            <p>
+                Crée une variable nom contenant ton prénom
+                et affiche-la dans la console.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>let nom = "Franck";
+
+console.log(nom);</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice JavaScript 2 : Addition</h3>
+            <p>
+                Crée deux variables a et b puis affiche leur somme.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>let a = 10;
+let b = 5;
+
+let somme = a + b;
+
+console.log(somme);</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice JavaScript 3 : Condition</h3>
+            <p>
+                Vérifie si un nombre est positif ou négatif.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>let nombre = -5;
+
+if (nombre > 0) {
+    console.log("Positif");
+} else if (nombre < 0) {
+    console.log("Négatif");
+} else {
+    console.log("Zéro");
+}</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice JavaScript 4 : Boucle</h3>
+            <p>
+                Affiche les nombres de 1 à 10 avec une boucle for.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}</code></pre>
+            </details>
+        </article>
+
+        <article class="exercise-card">
+            <h3>Exercice JavaScript 5 : Fonction</h3>
+            <p>
+                Crée une fonction qui reçoit deux nombres
+                et retourne leur produit.
+            </p>
+
+            <details>
+                <summary>Voir la correction</summary>
+                <pre><code>function multiplication(a, b) {
+    return a * b;
+}
+
+let resultat = multiplication(4, 5);
+
+console.log(resultat);</code></pre>
+            </details>
+        </article>
+    </section>
+
+    <section>
+        <div class="lesson-note">
+            <h2>Bravo pour ton entraînement !</h2>
+            <p>
+                Continue à pratiquer régulièrement.
+                La programmation s'apprend en écrivant,
+                testant et corrigeant du code.
+            </p>
+
+            <a href="cours.html" class="lc-btn">
+                Revoir les cours
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="lc-footer">
+    <p>© 2026 LearnCode - Apprendre le développement web</p>
+</footer>
+
+</body>
+</html>

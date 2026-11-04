@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation HTML - LearnCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="lc-header">
+    <a href="index.html" class="lc-logo">Learn<span>Code</span></a>
+
+    <nav class="lc-nav">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html" class="active">Cours</a>
+        <a href="exercices.html">Exercices</a>
+        <a href="premium.html">Premium</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+    <p>FORMATION COMPLÈTE</p>
+    <h1>Apprendre le HTML</h1>
+    <p>
+        Découvrez les bases du HTML et apprenez à créer
+        vos premières pages web étape par étape.
+    </p>
+</section>
+
+<main class="lesson-layout">
+
+    <aside class="lesson-sidebar">
+        <h3>Programme HTML</h3>
+
+        <a href="#introduction">1. Introduction</a>
+        <a href="#structure">2. Structure HTML</a>
+        <a href="#textes">3. Les textes</a>
+        <a href="#liens">4. Les liens</a>
+        <a href="#images">5. Les images</a>
+        <a href="#listes">6. Les listes</a>
+        <a href="#tableaux">7. Les tableaux</a>
+        <a href="#formulaires">8. Les formulaires</a>
+        <a href="#attributs">9. Les attributs</a>
+        <a href="#semantique">10. HTML sémantique</a>
+        <a href="#multimedia">11. Multimédia</a>
+        <a href="#projet">12. Projet pratique</a>
+    </aside>
+
+    <div class="lesson-content">
+
+        <!-- LEÇON 1 -->
+        <section id="introduction">
+            <h2>1. Introduction au HTML</h2>
+
+            <p>
+                HTML signifie HyperText Markup Language.
+                C'est un langage de balisage qui permet de
+                structurer le contenu d'une page web.
+            </p>
+
+            <p>Avec HTML, on peut ajouter :</p>
+
+            <ul>
+                <li>Des titres et des paragraphes.</li>
+                <li>Des images.</li>
+                <li>Des liens.</li>
+                <li>Des tableaux.</li>
+                <li>Des formulaires.</li>
+            </ul>
+
+            <div class="lesson-note">
+                <strong>À retenir :</strong>
+                HTML construit la structure, CSS s'occupe
+                de la présentation et JavaScript ajoute
+                des interactions.
+            </div>
+
+            <h3>Exemple simple</h3>
+
+            <pre><code>&lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;
+&lt;p&gt;J'apprends le HTML.&lt;/p&gt;</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un titre contenant ton prénom et un
+                paragraphe qui présente ton site.
+            </p>
+        </section>
+
+        <!-- LEÇON 2 -->
+        <section id="structure">
+            <h2>2. Structure d'une page HTML</h2>
+
+            <p>
+                Chaque document HTML possède une structure
+                de base. Elle permet au navigateur de
+                comprendre le contenu de la page.
+            </p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+    content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Ma première page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Bienvenue&lt;/h1&gt;
+    &lt;p&gt;Ma première page web.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h3>Explication</h3>
+
+            <ul>
+                <li><code>DOCTYPE</code> : indique HTML5.</li>
+                <li><code>html</code> : contient toute la page.</li>
+                <li><code>head</code> : contient les informations de la page.</li>
+                <li><code>title</code> : définit le titre de l'onglet.</li>
+                <li><code>body</code> : contient le contenu visible.</li>
+            </ul>
+
+            <div class="lesson-note">
+                Attention : la plupart des éléments HTML
+                s'écrivent avec une balise ouvrante et une
+                balise fermante.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un fichier nommé <code>index.html</code>
+                et reproduis la structure ci-dessus.
+            </p>
+        </section>
+
+        <!-- LEÇON 3 -->
+        <section id="textes">
+            <h2>3. Les titres et les paragraphes</h2>
+
+            <p>
+                HTML propose six niveaux de titres :
+                de <code>h1</code> à <code>h6</code>.
+            </p>
+
+            <pre><code>&lt;h1&gt;Grand titre&lt;/h1&gt;
+&lt;h2&gt;Titre secondaire&lt;/h2&gt;
+&lt;h3&gt;Petit titre&lt;/h3&gt;
+
+&lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;
+
+&lt;strong&gt;Texte important&lt;/strong&gt;
+
+&lt;em&gt;Texte mis en valeur&lt;/em&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;</code></pre>
+
+            <h3>À quoi servent ces balises ?</h3>
+
+            <ul>
+                <li><code>h1</code> à <code>h6</code> : les titres.</li>
+                <li><code>p</code> : les paragraphes.</li>
+                <li><code>strong</code> : le texte important.</li>
+                <li><code>em</code> : le texte mis en valeur.</li>
+                <li><code>br</code> : un retour à la ligne.</li>
+                <li><code>hr</code> : une séparation horizontale.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée une page avec un grand titre, deux
+                sous-titres et trois paragraphes.
+            </p>
+        </section>
+
+        <!-- LEÇON 4 -->
+        <section id="liens">
+            <h2>4. Les liens HTML</h2>
+
+            <p>
+                La balise <code>a</code> permet de créer
+                un lien vers une autre page ou un site web.
+            </p>
+
+            <pre><code>&lt;a href="https://www.google.com"&gt;
+    Visiter Google
+&lt;/a&gt;</code></pre>
+
+            <h3>Ouvrir un lien dans un nouvel onglet</h3>
+
+            <pre><code>&lt;a href="https://www.google.com"
+target="_blank"
+rel="noopener noreferrer"&gt;
+    Ouvrir Google
+&lt;/a&gt;</code></pre>
+
+            <h3>Lien vers une autre page de ton site</h3>
+
+            <pre><code>&lt;a href="contact.html"&gt;
+    Contact
+&lt;/a&gt;</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée trois liens : Accueil, À propos et Contact.
+                Chaque lien doit ouvrir une page différente.
+            </p>
+        </section>
+
+        <!-- LEÇON 5 -->
+        <section id="images">
+            <h2>5. Insérer des images</h2>
+
+            <p>
+                La balise <code>img</code> permet d'afficher
+                une image sur une page web.
+            </p>
+
+            <pre><code>&lt;img src="images/photo.jpg"
+alt="Photo de présentation"&gt;</code></pre>
+
+            <h3>Les attributs importants</h3>
+
+            <ul>
+                <li><code>src</code> : chemin vers l'image.</li>
+                <li><code>alt</code> : description de l'image.</li>
+                <li><code>width</code> : largeur.</li>
+                <li><code>height</code> : hauteur.</li>
+            </ul>
+
+            <h3>Exemple</h3>
+
+            <pre><code>&lt;img src="images/logo.png"
+alt="Logo LearnCode"
+width="200"&gt;</code></pre>
+
+            <div class="lesson-note">
+                Conseil : place tes images dans un dossier
+                nommé <code>images</code> pour mieux organiser
+                ton projet.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>
+                Ajoute une image à ta page HTML et donne-lui
+                une description avec l'attribut alt.
+            </p>
+        </section>
+
+        <!-- LEÇON 6 -->
+        <section id="listes">
+            <h2>6. Les listes HTML</h2>
+
+            <p>Il existe deux types de listes principales.</p>
+
+            <h3>Liste non ordonnée</h3>
+
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+            <h3>Liste ordonnée</h3>
+
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Créer un fichier HTML&lt;/li&gt;
+    &lt;li&gt;Ajouter le contenu&lt;/li&gt;
+    &lt;li&gt;Ajouter le CSS&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+            <h3>Différence</h3>
+
+            <ul>
+                <li><code>ul</code> : liste avec des puces.</li>
+                <li><code>ol</code> : liste numérotée.</li>
+                <li><code>li</code> : élément de la liste.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Présente cinq matières que tu souhaites
+                apprendre avec une liste ordonnée.
+            </p>
+        </section>
+
+        <!-- LEÇON 7 -->
+        <section id="tableaux">
+            <h2>7. Les tableaux HTML</h2>
+
+            <p>
+                Les tableaux permettent d'organiser des
+                informations en lignes et en colonnes.
+            </p>
+
+            <pre><code>&lt;table&gt;
+
+    &lt;tr&gt;
+        &lt;th&gt;Nom&lt;/th&gt;
+        &lt;th&gt;Âge&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Franck&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/table&gt;</code></pre>
+
+            <h3>Les balises</h3>
+
+            <ul>
+                <li><code>table</code> : crée le tableau.</li>
+                <li><code>tr</code> : crée une ligne.</li>
+                <li><code>th</code> : crée une cellule de titre.</li>
+                <li><code>td</code> : crée une cellule normale.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un tableau contenant trois étudiants
+                avec leurs noms et leurs notes.
+            </p>
+        </section>
+
+        <!-- LEÇON 8 -->
+        <section id="formulaires">
+            <h2>8. Les formulaires HTML</h2>
+
+            <p>
+                Un formulaire permet à un utilisateur
+                de saisir et d'envoyer des informations.
+            </p>
+
+            <pre><code>&lt;form action="#" method="post"&gt;
+
+    &lt;label for="nom"&gt;Votre nom&lt;/label&gt;
+    &lt;input type="text" id="nom"
+    name="nom" required&gt;
+
+    &lt;label for="email"&gt;Votre email&lt;/label&gt;
+    &lt;input type="email" id="email"
+    name="email" required&gt;
+
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message"
+    name="message"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;
+        Envoyer
+    &lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+            <h3>Les principaux champs</h3>
+
+            <ul>
+                <li><code>text</code> : texte simple.</li>
+                <li><code>email</code> : adresse email.</li>
+                <li><code>password</code> : mot de passe.</li>
+                <li><code>number</code> : nombre.</li>
+                <li><code>date</code> : date.</li>
+                <li><code>textarea</code> : texte long.</li>
+                <li><code>button</code> : bouton.</li>
+            </ul>
+
+            <div class="lesson-note">
+                Un formulaire HTML seul ne stocke pas les
+                informations. Pour recevoir et enregistrer
+                les données, il faut un traitement côté
+                serveur ou un service adapté.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un formulaire d'inscription avec :
+                nom, email, mot de passe et bouton Envoyer.
+            </p>
+        </section>
+
+        <!-- LEÇON 9 -->
+        <section id="attributs">
+            <h2>9. Les attributs HTML</h2>
+
+            <p>
+                Les attributs ajoutent des informations
+                supplémentaires aux balises HTML.
+            </p>
+
+            <pre><code>&lt;input type="text"
+placeholder="Votre nom"
+required&gt;
+
+&lt;a href="contact.html"
+title="Page de contact"&gt;
+    Contact
+&lt;/a&gt;
+
+&lt;img src="photo.jpg"
+alt="Une photo"&gt;</code></pre>
+
+            <h3>Quelques attributs courants</h3>
+
+            <ul>
+                <li><code>id</code> : identifiant unique.</li>
+                <li><code>class</code> : classe pour CSS.</li>
+                <li><code>href</code> : destination d'un lien.</li>
+                <li><code>src</code> : source d'une image.</li>
+                <li><code>title</code> : information complémentaire.</li>
+                <li><code>required</code> : champ obligatoire.</li>
+                <li><code>placeholder</code> : texte indicatif.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un champ email avec un placeholder
+                et l'attribut required.
+            </p>
+        </section>
+
+        <!-- LEÇON 10 -->
+        <section id="semantique">
+            <h2>10. Le HTML sémantique</h2>
+
+            <p>
+                Les balises sémantiques donnent un sens
+                précis aux différentes parties d'une page.
+            </p>
+
+            <pre><code>&lt;header&gt;
+    En-tête du site
+&lt;/header&gt;
+
+&lt;nav&gt;
+    Navigation
+&lt;/nav&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        Une section
+    &lt;/section&gt;
+
+    &lt;article&gt;
+        Un article
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    Pied de page
+&lt;/footer&gt;</code></pre>
+
+            <h3>Les balises principales</h3>
+
+            <ul>
+                <li><code>header</code> : en-tête.</li>
+                <li><code>nav</code> : menu de navigation.</li>
+                <li><code>main</code> : contenu principal.</li>
+                <li><code>section</code> : section de contenu.</li>
+                <li><code>article</code> : contenu autonome.</li>
+                <li><code>footer</code> : pied de page.</li>
+                <li><code>aside</code> : contenu complémentaire.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Construis une page contenant un header,
+                un menu, un main et un footer.
+            </p>
+        </section>
+
+        <!-- LEÇON 11 -->
+        <section id="multimedia">
+            <h2>11. Ajouter des vidéos et de l'audio</h2>
+
+            <h3>Insérer une vidéo</h3>
+
+            <pre><code>&lt;video controls width="400"&gt;
+    &lt;source src="video.mp4"
+    type="video/mp4"&gt;
+
+    Votre navigateur ne supporte pas la vidéo.
+&lt;/video&gt;</code></pre>
+
+            <h3>Insérer un fichier audio</h3>
+
+            <pre><code>&lt;audio controls&gt;
+    &lt;source src="musique.mp3"
+    type="audio/mpeg"&gt;
+
+    Votre navigateur ne supporte pas l'audio.
+&lt;/audio&gt;</code></pre>
+
+            <p>
+                L'attribut <code>controls</code> affiche
+                les commandes de lecture.
+            </p>
+
+            <h3>Exercice</h3>
+            <p>
+                Ajoute une vidéo locale à une page HTML
+                avec les commandes de lecture.
+            </p>
+        </section>
+
+        <!-- LEÇON 12 -->
+        <section id="projet">
+            <h2>12. Projet pratique : créer une page personnelle</h2>
+
+            <p>
+                Pour terminer cette formation HTML,
+                tu vas créer une petite page personnelle.
+            </p>
+
+            <h3>Objectif</h3>
+
+            <ul>
+                <li>Créer un titre principal.</li>
+                <li>Ajouter une présentation.</li>
+                <li>Insérer une photo.</li>
+                <li>Créer une liste de compétences.</li>
+                <li>Ajouter un lien de contact.</li>
+                <li>Créer un formulaire simple.</li>
+            </ul>
+
+            <h3>Code de départ</h3>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+    content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Ma présentation&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;À propos de moi&lt;/h2&gt;
+            &lt;p&gt;Je suis en formation informatique.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Mes compétences&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;HTML&lt;/li&gt;
+                &lt;li&gt;CSS&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Mon premier projet HTML&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <div class="lesson-note">
+                <strong>Défi final :</strong>
+                Termine cette page sans copier les exemples.
+                Essaie de construire chaque partie toi-même.
+            </div>
+        </section>
+
+        <div class="lesson-note">
+            <h3>Félicitations !</h3>
+            <p>
+                Tu as terminé le programme HTML de LearnCode.
+                La prochaine étape est d'apprendre CSS pour
+                rendre tes pages modernes et professionnelles.
+            </p>
+
+            <a href="css.html" class="lc-btn">
+                Commencer la formation CSS
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="lc-footer">
+    <p>© 2026 LearnCode - Apprendre le développement web</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation CSS - LearnCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="lc-header">
+    <a href="index.html" class="lc-logo">Learn<span>Code</span></a>
+
+    <nav class="lc-nav">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html" class="active">Cours</a>
+        <a href="exercices.html">Exercices</a>
+        <a href="premium.html">Premium</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+    <p>FORMATION COMPLÈTE</p>
+    <h1>Apprendre le CSS</h1>
+    <p>
+        Apprenez à styliser vos pages web avec les couleurs,
+        Flexbox, Grid, les animations et le responsive design.
+    </p>
+</section>
+
+<main class="lesson-layout">
+
+    <aside class="lesson-sidebar">
+        <h3>Programme CSS</h3>
+        <a href="#introduction">1. Introduction</a>
+        <a href="#selecteurs">2. Sélecteurs</a>
+        <a href="#couleurs">3. Couleurs</a>
+        <a href="#typographie">4. Typographie</a>
+        <a href="#espacements">5. Espacements</a>
+        <a href="#box-model">6. Box Model</a>
+        <a href="#display">7. Display</a>
+        <a href="#flexbox">8. Flexbox</a>
+        <a href="#grid">9. Grid</a>
+        <a href="#positionnement">10. Positionnement</a>
+        <a href="#pseudo-classes">11. Pseudo-classes</a>
+        <a href="#animations">12. Animations</a>
+        <a href="#responsive">13. Responsive</a>
+        <a href="#navbar">14. Navbar</a>
+        <a href="#projet">15. Projet pratique</a>
+    </aside>
+
+    <div class="lesson-content">
+
+        <section id="introduction">
+            <h2>1. Introduction au CSS</h2>
+
+            <p>
+                CSS signifie Cascading Style Sheets.
+                Il permet de modifier l'apparence des pages HTML :
+                couleurs, tailles, espacements, disposition et animations.
+            </p>
+
+            <h3>Comment ajouter du CSS ?</h3>
+
+            <p>Il existe trois méthodes principales.</p>
+
+            <h3>CSS en ligne</h3>
+            <pre><code>&lt;p style="color: red;"&gt;
+    Bonjour !
+&lt;/p&gt;</code></pre>
+
+            <h3>CSS interne</h3>
+            <pre><code>&lt;style&gt;
+    p {
+        color: blue;
+    }
+&lt;/style&gt;</code></pre>
+
+            <h3>CSS externe</h3>
+            <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+            <div class="lesson-note">
+                La méthode externe est recommandée pour organiser
+                un vrai projet web.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>Relie un fichier HTML à un fichier style.css.</p>
+        </section>
+
+        <section id="selecteurs">
+            <h2>2. Les sélecteurs CSS</h2>
+
+            <p>
+                Un sélecteur permet de choisir les éléments HTML
+                auxquels on veut appliquer un style.
+            </p>
+
+            <h3>Sélecteur de balise</h3>
+            <pre><code>p {
+    color: blue;
+}</code></pre>
+
+            <h3>Sélecteur de classe</h3>
+            <pre><code>.titre {
+    color: green;
+}</code></pre>
+
+            <p>Dans HTML :</p>
+            <pre><code>&lt;h1 class="titre"&gt;Bienvenue&lt;/h1&gt;</code></pre>
+
+            <h3>Sélecteur d'identifiant</h3>
+            <pre><code>#principal {
+    background: lightgray;
+}</code></pre>
+
+            <p>Dans HTML :</p>
+            <pre><code>&lt;section id="principal"&gt;
+    Contenu principal
+&lt;/section&gt;</code></pre>
+
+            <h3>Sélecteur universel</h3>
+            <pre><code>* {
+    margin: 0;
+    padding: 0;
+}</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Applique une couleur rouge à tous les paragraphes,
+                une couleur verte à une classe .titre et un fond
+                gris à un élément ayant l'id #principal.
+            </p>
+        </section>
+
+        <section id="couleurs">
+            <h2>3. Les couleurs et les arrière-plans</h2>
+
+            <p>
+                CSS permet de définir les couleurs du texte,
+                les arrière-plans et les bordures.
+            </p>
+
+            <pre><code>body {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: rgb(50, 50, 50);
+}</code></pre>
+
+            <h3>Différentes écritures</h3>
+
+            <pre><code>color: red;
+
+color: #ff0000;
+
+color: rgb(255, 0, 0);
+
+color: rgba(255, 0, 0, 0.5);</code></pre>
+
+            <h3>Image en arrière-plan</h3>
+
+            <pre><code>.hero {
+    background-image: url("images/fond.jpg");
+    background-size: cover;
+    background-position: center;
+}</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée une page avec un fond clair, un titre bleu
+                et un paragraphe gris.
+            </p>
+        </section>
+
+        <section id="typographie">
+            <h2>4. La typographie</h2>
+
+            <p>
+                La typographie concerne l'apparence des textes :
+                police, taille, épaisseur et alignement.
+            </p>
+
+            <pre><code>h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}</code></pre>
+
+            <h3>Propriétés importantes</h3>
+
+            <ul>
+                <li><code>font-family</code> : police.</li>
+                <li><code>font-size</code> : taille.</li>
+                <li><code>font-weight</code> : épaisseur.</li>
+                <li><code>text-align</code> : alignement.</li>
+                <li><code>line-height</code> : hauteur de ligne.</li>
+                <li><code>text-decoration</code> : décoration du texte.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un titre centré de 36px et un paragraphe
+                de 18px avec une hauteur de ligne de 1.5.
+            </p>
+        </section>
+
+        <section id="espacements">
+            <h2>5. Les espacements : margin et padding</h2>
+
+            <p>
+                Ces propriétés permettent de gérer les espaces
+                autour et à l'intérieur des éléments.
+            </p>
+
+            <h3>Margin</h3>
+            <pre><code>.carte {
+    margin: 20px;
+}</code></pre>
+
+            <p>
+                <code>margin</code> crée un espace extérieur
+                autour de l'élément.
+            </p>
+
+            <h3>Padding</h3>
+            <pre><code>.carte {
+    padding: 20px;
+}</code></pre>
+
+            <p>
+                <code>padding</code> crée un espace intérieur
+                entre le contenu et la bordure.
+            </p>
+
+            <h3>Définir chaque côté</h3>
+            <pre><code>.carte {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée une carte avec 20px de padding et
+                15px de margin.
+            </p>
+        </section>
+
+        <section id="box-model">
+            <h2>6. Le Box Model</h2>
+
+            <p>
+                Chaque élément HTML est représenté comme une boîte.
+                Cette boîte contient quatre parties :
+            </p>
+
+            <ul>
+                <li>Content : contenu.</li>
+                <li>Padding : espace intérieur.</li>
+                <li>Border : bordure.</li>
+                <li>Margin : espace extérieur.</li>
+            </ul>
+
+            <pre><code>* {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 15px;
+}</code></pre>
+
+            <div class="lesson-note">
+                <strong>À retenir :</strong>
+                <code>box-sizing: border-box;</code> permet
+                d'inclure le padding et la bordure dans la
+                largeur définie.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée une boîte de 300px de largeur avec une
+                bordure de 2px et un padding de 20px.
+            </p>
+        </section>
+
+        <section id="display">
+            <h2>7. La propriété Display</h2>
+
+            <p>
+                La propriété display définit la manière dont
+                un élément apparaît et occupe l'espace.
+            </p>
+
+            <h3>Display block</h3>
+            <pre><code>div {
+    display: block;
+}</code></pre>
+            <p>
+                Un élément block commence généralement sur
+                une nouvelle ligne et occupe toute la largeur
+                disponible.
+            </p>
+
+            <h3>Display inline</h3>
+            <pre><code>span {
+    display: inline;
+}</code></pre>
+            <p>
+                Un élément inline reste dans la ligne du texte.
+            </p>
+
+            <h3>Display inline-block</h3>
+            <pre><code>.bouton {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+}</code></pre>
+
+            <h3>Display none</h3>
+            <pre><code>.cache {
+    display: none;
+}</code></pre>
+            <p>
+                L'élément n'est plus affiché et ne réserve
+                plus son espace habituel.
+            </p>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée trois éléments et teste block, inline
+                et inline-block pour observer les différences.
+            </p>
+        </section>
+
+        <section id="flexbox">
+            <h2>8. Flexbox</h2>
+
+            <p>
+                Flexbox permet d'organiser facilement des éléments
+                sur une ligne ou une colonne.
+            </p>
+
+            <h3>Activer Flexbox</h3>
+            <pre><code>.container {
+    display: flex;
+}</code></pre>
+
+            <h3>Direction</h3>
+            <pre><code>.container {
+    display: flex;
+    flex-direction: row;
+}</code></pre>
+
+            <ul>
+                <li><code>row</code> : éléments sur une ligne.</li>
+                <li><code>column</code> : éléments en colonne.</li>
+                <li><code>row-reverse</code> : ligne inversée.</li>
+                <li><code>column-reverse</code> : colonne inversée.</li>
+            </ul>
+
+            <h3>Justify-content</h3>
+            <pre><code>.container {
+    display: flex;
+    justify-content: center;
+}</code></pre>
+
+            <p>
+                Cette propriété organise les éléments sur
+                l'axe principal.
+            </p>
+
+            <ul>
+                <li><code>flex-start</code></li>
+                <li><code>center</code></li>
+                <li><code>flex-end</code></li>
+                <li><code>space-between</code></li>
+                <li><code>space-around</code></li>
+                <li><code>space-evenly</code></li>
+            </ul>
+
+            <h3>Align-items</h3>
+            <pre><code>.container {
+    display: flex;
+    align-items: center;
+}</code></pre>
+
+            <p>
+                Cette propriété aligne les éléments sur
+                l'axe transversal.
+            </p>
+
+            <h3>Gap</h3>
+            <pre><code>.container {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+
+            <h3>Exemple complet</h3>
+            <pre><code>.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    width: 100px;
+    padding: 20px;
+    background: lightblue;
+}</code></pre>
+
+            <p>HTML correspondant :</p>
+            <pre><code>&lt;div class="container"&gt;
+    &lt;div class="box"&gt;1&lt;/div&gt;
+    &lt;div class="box"&gt;2&lt;/div&gt;
+    &lt;div class="box"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <div class="lesson-note">
+                Flexbox est particulièrement utile pour les menus,
+                les boutons, les cartes et les alignements.
+            </div>
+
+            <h3>Exercices</h3>
+            <ol>
+                <li>Aligne trois boîtes horizontalement.</li>
+                <li>Centre-les avec justify-content.</li>
+                <li>Place-les en colonne.</li>
+                <li>Ajoute un espace de 15px avec gap.</li>
+                <li>Centre-les verticalement dans un conteneur.</li>
+            </ol>
+        </section>
+
+        <section id="grid">
+            <h2>9. CSS Grid</h2>
+
+            <p>
+                Grid permet de créer des mises en page
+                organisées en lignes et en colonnes.
+            </p>
+
+            <h3>Activer Grid</h3>
+            <pre><code>.container {
+    display: grid;
+}</code></pre>
+
+            <h3>Créer trois colonnes</h3>
+            <pre><code>.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}</code></pre>
+
+            <h3>Utiliser repeat()</h3>
+            <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}</code></pre>
+
+            <h3>Créer deux lignes</h3>
+            <pre><code>.container {
+    display: grid;
+    grid-template-rows: 100px 200px;
+}</code></pre>
+
+            <h3>Grid responsive</h3>
+            <pre><code>.container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}</code></pre>
+
+            <div class="lesson-note">
+                Flexbox est souvent utilisé pour organiser
+                les éléments dans une direction. Grid est
+                particulièrement pratique pour les mises
+                en page en deux dimensions.
+            </div>
+
+            <h3>Exercices</h3>
+            <ol>
+                <li>Crée une grille de trois colonnes.</li>
+                <li>Ajoute six cartes.</li>
+                <li>Ajoute un espace de 20px.</li>
+                <li>Rends la grille adaptable aux petits écrans.</li>
+            </ol>
+        </section>
+
+        <section id="positionnement">
+            <h2>10. Le positionnement</h2>
+
+            <p>
+                La propriété position permet de contrôler
+                la position d'un élément.
+            </p>
+
+            <h3>Static</h3>
+            <pre><code>.box {
+    position: static;
+}</code></pre>
+            <p>C'est le positionnement normal par défaut.</p>
+
+            <h3>Relative</h3>
+            <pre><code>.box {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}</code></pre>
+            <p>
+                L'élément est déplacé par rapport à sa position
+                normale.
+            </p>
+
+            <h3>Absolute</h3>
+            <pre><code>.parent {
+    position: relative;
+}
+
+.enfant {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}</code></pre>
+            <p>
+                L'élément absolute se positionne par rapport
+                à son ancêtre positionné le plus proche.
+            </p>
+
+            <h3>Fixed</h3>
+            <pre><code>.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+}</code></pre>
+            <p>
+                L'élément reste fixé par rapport à la fenêtre
+                du navigateur.
+            </p>
+
+            <h3>Sticky</h3>
+            <pre><code>.menu {
+    position: sticky;
+    top: 0;
+}</code></pre>
+            <p>
+                L'élément suit le défilement puis reste collé
+                à la position définie.
+            </p>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un menu avec position: fixed puis teste
+                son comportement lorsque tu fais défiler la page.
+            </p>
+        </section>
+
+        <section id="pseudo-classes">
+            <h2>11. Les pseudo-classes</h2>
+
+            <p>
+                Les pseudo-classes permettent de styliser
+                un élément selon son état.
+            </p>
+
+            <h3>Hover</h3>
+            <pre><code>button:hover {
+    background: blue;
+    color: white;
+}</code></pre>
+            <p>Le style s'applique lorsque le pointeur passe dessus.</p>
+
+            <h3>Active</h3>
+            <pre><code>button:active {
+    transform: scale(0.95);
+}</code></pre>
+            <p>Le style s'applique pendant l'activation du bouton.</p>
+
+            <h3>Visited</h3>
+            <pre><code>a:visited {
+    color: purple;
+}</code></pre>
+            <p>Le style s'applique aux liens déjà visités.</p>
+
+            <h3>Focus</h3>
+            <pre><code>input:focus {
+    border: 2px solid blue;
+    outline: none;
+}</code></pre>
+            <p>Le style s'applique quand le champ reçoit le focus.</p>
+
+            <h3>First-child</h3>
+            <pre><code>li:first-child {
+    color: red;
+}</code></pre>
+
+            <h3>Last-child</h3>
+            <pre><code>li:last-child {
+    color: green;
+}</code></pre>
+
+            <h3>Exercice</h3>
+            <ol>
+                <li>Crée un bouton avec hover.</li>
+                <li>Ajoute un effet active.</li>
+                <li>Change la couleur des liens visités.</li>
+                <li>Modifie la bordure d'un input au focus.</li>
+            </ol>
+        </section>
+
+        <section id="animations">
+            <h2>12. Les transitions et animations</h2>
+
+            <h3>Transition</h3>
+            <pre><code>.bouton {
+    background: blue;
+    transition: 0.3s ease;
+}
+
+.bouton:hover {
+    background: green;
+}</code></pre>
+
+            <p>
+                Transition permet de rendre un changement
+                de style progressif.
+            </p>
+
+            <h3>Animation avec @keyframes</h3>
+            <pre><code>@keyframes mouvement {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.boite {
+    animation: mouvement 2s infinite alternate;
+}</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un bouton qui change progressivement
+                de couleur lorsque tu passes dessus.
+            </p>
+        </section>
+
+        <section id="responsive">
+            <h2>13. Le Responsive Design</h2>
+
+            <p>
+                Le responsive design permet à un site web
+                de s'adapter aux écrans des téléphones,
+                tablettes et ordinateurs.
+            </p>
+
+            <h3>La règle media query</h3>
+            <pre><code>.container {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+
+            <h3>Plusieurs tailles d'écran</h3>
+            <pre><code>@media (max-width: 900px) {
+    .container {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+
+            <div class="lesson-note">
+                La balise viewport dans le HTML est importante
+                pour que les media queries fonctionnent comme prévu
+                sur les téléphones.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée trois cartes alignées sur ordinateur,
+                puis empilées verticalement sur téléphone.
+            </p>
+        </section>
+
+        <section id="navbar">
+            <h2>14. Créer une Navbar professionnelle</h2>
+
+            <p>
+                Une navbar est un menu de navigation qui permet
+                de passer d'une page à une autre.
+            </p>
+
+            <h3>HTML</h3>
+            <pre><code>&lt;header class="header"&gt;
+
+    &lt;a href="#" class="logo"&gt;MonSite&lt;/a&gt;
+
+    &lt;nav class="navbar"&gt;
+        &lt;a href="index.html"&gt;Accueil&lt;/a&gt;
+        &lt;a href="about.html"&gt;À propos&lt;/a&gt;
+        &lt;a href="services.html"&gt;Services&lt;/a&gt;
+        &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+
+&lt;/header&gt;</code></pre>
+
+            <h3>CSS</h3>
+            <pre><code>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #22243a;
+}
+
+.logo {
+    color: white;
+  

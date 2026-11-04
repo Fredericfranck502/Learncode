@@ -1,0 +1,813 @@
+
+/* ==================================================
+   LEARNCODE - CSS GLOBAL COMPLET
+   Compatible avec toutes les pages
+================================================== */
+
+/* 1. RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background: #f8fafc;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 2. COULEURS */
+:root {
+    --primary: #0284c7;
+    --primary-dark: #0369a1;
+    --dark: #101d3a;
+    --dark-light: #1e3a5f;
+    --light: #f1f7fc;
+    --white: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --success: #16a34a;
+}
+
+/* 3. HEADER */
+header,
+.lc-header {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 6%;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    position: relative;
+    z-index: 100;
+}
+
+.logo,
+.lc-logo {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo span,
+.lc-logo span {
+    color: #38bdf8;
+}
+
+nav,
+.lc-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a,
+.lc-nav a {
+    color: var(--white);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active,
+.lc-nav a:hover,
+.lc-nav a.active {
+    color: #38bdf8;
+}
+
+/* 4. BOUTONS */
+.btn,
+.lc-button {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 13px 24px;
+    border: 0;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.lc-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* 5. HERO - ACCUEIL */
+.hero {
+    min-height: 500px;
+    padding: 85px 7%;
+    background: linear-gradient(120deg, #101d3a, #174b78);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #38bdf8;
+}
+
+.hero-content p {
+    color: #dbeafe;
+    margin-bottom: 25px;
+}
+
+.hero-content .btn {
+    margin-top: 10px;
+}
+
+/* 6. SECTIONS */
+section {
+    scroll-margin-top: 25px;
+}
+
+.section,
+.cours,
+.apropos,
+.contact {
+    padding: 75px 6%;
+}
+
+.cours h2,
+.apropos h2,
+.contact h2 {
+    text-align: center;
+    color: var(--dark);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+
+/* 7. CARTES ET GRID */
+.cours-container,
+.services-grid,
+.lc-course-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.cours-card,
+.service-card,
+.lc-course-card {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.cours-card:hover,
+.service-card:hover,
+.lc-course-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.cours-card h3,
+.service-card h3,
+.lc-course-card h3 {
+    color: var(--dark);
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.cours-card p,
+.service-card p,
+.lc-course-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.cours-card a,
+.service-card a,
+.lc-course-card a {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.cours-card a:hover,
+.service-card a:hover,
+.lc-course-card a:hover {
+    color: var(--dark);
+}
+
+/* 8. PAGE COURS */
+.courses-hero {
+    padding: 85px 7%;
+    background: linear-gradient(120deg, #101d3a, #174b78);
+    color: white;
+    text-align: center;
+}
+
+.courses-hero-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.lc-label {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.courses-hero .lc-label {
+    color: #7dd3fc;
+}
+
+.courses-hero h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.courses-hero h1 span {
+    display: block;
+    color: #38bdf8;
+}
+
+.courses-hero p {
+    color: #dbeafe;
+    margin: 0 auto 25px;
+    max-width: 600px;
+}
+
+.lc-stats {
+    width: 85%;
+    max-width: 900px;
+    margin: -30px auto 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+.lc-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.lc-stats strong {
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.lc-stats span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.lc-course-section {
+    padding: 65px 6%;
+}
+
+.lc-alternate {
+    background: #eef5fb;
+}
+
+.lc-section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.lc-section-heading h2 {
+    color: var(--dark);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.lc-section-heading p {
+    color: var(--muted);
+}
+
+.lc-number {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.lc-level {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.beginner {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.intermediate {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.advanced {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.lc-final-cta {
+    padding: 65px 20px;
+    text-align: center;
+    background: #dff3ff;
+}
+
+.lc-final-cta h2 {
+    color: var(--dark);
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.lc-final-cta p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+/* 9. PAGE LEÇONS */
+.lesson-hero {
+    padding: 60px 6%;
+    background: #eaf5fc;
+    text-align: center;
+}
+
+.lesson-hero h1 {
+    color: var(--dark);
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.lesson-hero p {
+    color: var(--muted);
+}
+
+.lesson-layout {
+    width: 90%;
+    max-width: 1150px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.lesson-sidebar {
+    background: white;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    position: sticky;
+    top: 20px;
+}
+
+.lesson-sidebar h3 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.lesson-sidebar a {
+    display: block;
+    color: var(--muted);
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.lesson-sidebar a:hover,
+.lesson-sidebar a.active {
+    color: var(--primary);
+}
+
+.lesson-content {
+    min-width: 0;
+    background: white;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.lesson-content h2 {
+    color: var(--dark);
+    margin: 25px 0 12px;
+}
+
+.lesson-content p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.lesson-content pre {
+    background: #101d3a;
+    color: #e0f2fe;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 18px 0;
+    font-size: 13px;
+}
+
+.lesson-content code {
+    font-family: monospace;
+}
+
+.lesson-note {
+    padding: 18px;
+    background: #e0f2fe;
+    border-left: 4px solid var(--primary);
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* 10. EXERCICES */
+.exercise-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.exercise-card h3 {
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.exercise-card p {
+    color: var(--muted);
+}
+
+.exercise-card button {
+    margin-top: 15px;
+}
+
+.answer-box {
+    padding: 15px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+/* 11. PREMIUM */
+.premium-hero {
+    background: linear-gradient(120deg, #101d3a, #174b78);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.premium-hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.premium-card {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+.premium-card h2 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.premium-price {
+    font-size: 35px;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.premium-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.premium-card li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+/* 12. FORMULAIRES */
+.form-container {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--dark);
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-container button {
+    width: 100%;
+}
+
+/* 13. CONTACT */
+.contact-box {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 35px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.contact-box h3 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+/* 14. FOOTER */
+footer,
+.lc-footer {
+    padding: 35px 15px;
+    background: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+footer p,
+.lc-footer p {
+    color: #cbd5e1;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.lc-footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* 15. TABLETTE */
+@media (max-width: 900px) {
+    .cours-container,
+    .services-grid,
+    .lc-course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        position: static;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+}
+
+/* 16. MOBILE */
+@media (max-width: 650px) {
+    header,
+    .lc-header {
+        flex-direction: column;
+        padding: 18px 12px;
+    }
+
+    nav,
+    .lc-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a,
+    .lc-nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 20px;
+    }
+
+    .hero-content h1,
+    .courses-hero h1 {
+        font-size: 31px;
+    }
+
+    .courses-hero {
+        padding: 60px 20px;
+    }
+
+    .lc-stats {
+        width: 92%;
+        padding: 18px 8px;
+        gap: 8px;
+    }
+
+    .lc-stats strong {
+        font-size: 23px;
+    }
+
+    .lc-stats span {
+        font-size: 11px;
+    }
+
+    .cours-container,
+    .services-grid,
+    .lc-course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cours,
+    .apropos,
+    .contact,
+    .lc-course-section {
+        padding: 50px 18px;
+    }
+
+    .cours h2,
+    .apropos h2,
+    .contact h2,
+    .lc-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .lesson-layout {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .lesson-content {
+        padding: 20px;
+    }
+
+    .lesson-hero h1 {
+        font-size: 29px;
+    }
+
+    .premium-hero h1 {
+        font-size: 30px;
+    }
+
+    .premium-card,
+    .form-container {
+        margin: 25px 15px;
+        padding: 22px;
+    }
+
+    .lc-final-cta h2 {
+        font-size: 25px;
+    }
+}
+
+/* 17. PETITS TELEPHONES */
+@media (max-width: 380px) {
+    .logo,
+    .lc-logo {
+        font-size: 22px;
+    }
+
+    nav,
+    .lc-nav {
+        gap: 9px;
+    }
+
+    nav a,
+    .lc-nav a {
+        font-size: 12px;
+    }
+
+    .hero-content h1,
+    .courses-hero h1 {
+        font-size: 27px;
+    }
+
+    .lc-stats strong {
+        font-size: 20px;
+    }
+}

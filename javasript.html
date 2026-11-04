@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation JavaScript - LearnCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="lc-header">
+    <a href="index.html" class="lc-logo">Learn<span>Code</span></a>
+
+    <nav class="lc-nav">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html" class="active">Cours</a>
+        <a href="exercices.html">Exercices</a>
+        <a href="premium.html">Premium</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+    <p>FORMATION COMPLÈTE</p>
+    <h1>Apprendre JavaScript</h1>
+    <p>
+        Découvrez la programmation JavaScript et apprenez
+        à rendre vos pages web interactives.
+    </p>
+</section>
+
+<main class="lesson-layout">
+
+    <aside class="lesson-sidebar">
+        <h3>Programme JavaScript</h3>
+        <a href="#introduction">1. Introduction</a>
+        <a href="#variables">2. Variables</a>
+        <a href="#types">3. Types de données</a>
+        <a href="#operateurs">4. Opérateurs</a>
+        <a href="#conditions">5. Conditions</a>
+        <a href="#boucles">6. Boucles</a>
+        <a href="#fonctions">7. Fonctions</a>
+        <a href="#tableaux">8. Tableaux</a>
+        <a href="#objets">9. Objets</a>
+        <a href="#dom">10. DOM</a>
+        <a href="#evenements">11. Événements</a>
+        <a href="#projet">12. Projet pratique</a>
+    </aside>
+
+    <div class="lesson-content">
+
+        <section id="introduction">
+            <h2>1. Introduction à JavaScript</h2>
+
+            <p>
+                JavaScript est un langage de programmation
+                utilisé pour rendre les pages web interactives.
+            </p>
+
+            <p>Il permet par exemple de :</p>
+            <ul>
+                <li>Afficher des messages.</li>
+                <li>Réagir aux clics sur les boutons.</li>
+                <li>Vérifier les formulaires.</li>
+                <li>Modifier le contenu HTML.</li>
+                <li>Créer des applications web.</li>
+            </ul>
+
+            <h3>Ajouter JavaScript dans HTML</h3>
+
+            <pre><code>&lt;script&gt;
+    alert("Bienvenue sur LearnCode !");
+&lt;/script&gt;</code></pre>
+
+            <h3>Utiliser un fichier externe</h3>
+            <pre><code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
+
+            <p>
+                Le mot <code>defer</code> permet au navigateur
+                de charger le script sans bloquer l'analyse HTML.
+            </p>
+
+            <div class="lesson-note">
+                HTML structure la page, CSS la met en forme
+                et JavaScript ajoute des comportements.
+            </div>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un fichier script.js et affiche un message
+                dans la console avec console.log().
+            </p>
+        </section>
+
+        <section id="variables">
+            <h2>2. Les variables</h2>
+
+            <p>
+                Une variable permet de stocker une information
+                que le programme pourra utiliser.
+            </p>
+
+            <h3>Avec let</h3>
+            <pre><code>let nom = "Franck";
+let age = 20;
+
+console.log(nom);
+console.log(age);</code></pre>
+
+            <h3>Avec const</h3>
+            <pre><code>const pays = "Madagascar";
+
+console.log(pays);</code></pre>
+
+            <h3>Différence</h3>
+            <ul>
+                <li><code>let</code> : valeur réassignable.</li>
+                <li><code>const</code> : variable non réassignable.</li>
+                <li><code>var</code> : ancienne manière de déclarer une variable.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée trois variables : prénom, ville et formation.
+                Affiche-les avec console.log().
+            </p>
+        </section>
+
+        <section id="types">
+            <h2>3. Les types de données</h2>
+
+            <p>
+                JavaScript possède plusieurs types de données.
+            </p>
+
+            <pre><code>let nom = "Franck";       // String
+let age = 20;             // Number
+let actif = true;         // Boolean
+let resultat;             // Undefined
+let valeur = null;        // Null</code></pre>
+
+            <h3>Les principaux types</h3>
+            <ul>
+                <li>String : texte.</li>
+                <li>Number : nombre.</li>
+                <li>Boolean : vrai ou faux.</li>
+                <li>Undefined : valeur non définie.</li>
+                <li>Null : absence volontaire de valeur.</li>
+                <li>Object : objet.</li>
+                <li>Array : tableau.</li>
+            </ul>
+
+            <h3>Vérifier le type</h3>
+            <pre><code>let age = 20;
+
+console.log(typeof age);</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Déclare une variable texte, une variable nombre
+                et une variable booléenne. Affiche leur type.
+            </p>
+        </section>
+
+        <section id="operateurs">
+            <h2>4. Les opérateurs</h2>
+
+            <p>
+                Les opérateurs permettent de réaliser des
+                calculs et des comparaisons.
+            </p>
+
+            <h3>Opérateurs arithmétiques</h3>
+            <pre><code>let a = 10;
+let b = 3;
+
+console.log(a + b); // Addition
+console.log(a - b); // Soustraction
+console.log(a * b); // Multiplication
+console.log(a / b); // Division
+console.log(a % b); // Reste
+console.log(a ** b); // Puissance</code></pre>
+
+            <h3>Opérateurs de comparaison</h3>
+            <pre><code>console.log(10 > 5);
+console.log(10 < 5);
+console.log(10 === 10);
+console.log(10 !== 5);
+console.log(10 >= 10);</code></pre>
+
+            <h3>Opérateurs logiques</h3>
+            <pre><code>let age = 20;
+
+console.log(age >= 18 && age <= 30);
+console.log(age < 18 || age > 60);
+console.log(!(age < 18));</code></pre>
+
+            <ul>
+                <li><code>&&</code> : ET.</li>
+                <li><code>||</code> : OU.</li>
+                <li><code>!</code> : NON.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Déclare deux nombres et affiche leur somme,
+                leur produit et leur différence.
+            </p>
+        </section>
+
+        <section id="conditions">
+            <h2>5. Les conditions</h2>
+
+            <p>
+                Les conditions permettent d'exécuter des
+                instructions selon une situation.
+            </p>
+
+            <h3>Condition if</h3>
+            <pre><code>let age = 20;
+
+if (age >= 18) {
+    console.log("Majeur");
+}</code></pre>
+
+            <h3>if et else</h3>
+            <pre><code>let note = 12;
+
+if (note >= 10) {
+    console.log("Admis");
+} else {
+    console.log("Non admis");
+}</code></pre>
+
+            <h3>if, else if et else</h3>
+            <pre><code>let note = 15;
+
+if (note >= 16) {
+    console.log("Très bien");
+} else if (note >= 14) {
+    console.log("Bien");
+} else if (note >= 10) {
+    console.log("Passable");
+} else {
+    console.log("Insuffisant");
+}</code></pre>
+
+            <h3>Switch</h3>
+            <pre><code>let jour = 2;
+
+switch (jour) {
+    case 1:
+        console.log("Lundi");
+        break;
+
+    case 2:
+        console.log("Mardi");
+        break;
+
+    default:
+        console.log("Autre jour");
+}</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Écris un programme qui vérifie si un nombre
+                est positif, négatif ou égal à zéro.
+            </p>
+        </section>
+
+        <section id="boucles">
+            <h2>6. Les boucles</h2>
+
+            <p>
+                Les boucles permettent de répéter des instructions
+                plusieurs fois.
+            </p>
+
+            <h3>Boucle for</h3>
+            <pre><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+
+            <h3>Boucle while</h3>
+            <pre><code>let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+
+            <h3>Boucle do...while</h3>
+            <pre><code>let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);</code></pre>
+
+            <h3>Break et continue</h3>
+            <pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 5) {
+        break;
+    }
+
+    console.log(i);
+}</code></pre>
+
+            <p>
+                <code>break</code> arrête la boucle.
+                <code>continue</code> passe directement
+                à l'itération suivante.
+            </p>
+
+            <h3>Exercices</h3>
+            <ol>
+                <li>Affiche les nombres de 1 à 10.</li>
+                <li>Affiche les nombres pairs de 2 à 20.</li>
+                <li>Calcule la somme des nombres de 1 à 100.</li>
+                <li>Affiche la table de multiplication de 7.</li>
+            </ol>
+        </section>
+
+        <section id="fonctions">
+            <h2>7. Les fonctions</h2>
+
+            <p>
+                Une fonction est un bloc de code réutilisable.
+                Elle peut recevoir des paramètres et retourner
+                un résultat.
+            </p>
+
+            <h3>Créer une fonction</h3>
+            <pre><code>function saluer() {
+    console.log("Bonjour !");
+}
+
+saluer();</code></pre>
+
+            <h3>Fonction avec paramètre</h3>
+            <pre><code>function saluer(nom) {
+    console.log("Bonjour " + nom);
+}
+
+saluer("Franck");</code></pre>
+
+            <h3>Fonction avec return</h3>
+            <pre><code>function addition(a, b) {
+    return a + b;
+}
+
+let resultat = addition(5, 3);
+
+console.log(resultat);</code></pre>
+
+            <h3>Fonction fléchée</h3>
+            <pre><code>const carre = (nombre) => {
+    return nombre * nombre;
+};
+
+console.log(carre(4));</code></pre>
+
+            <div class="lesson-note">
+                <strong>À retenir :</strong>
+                console.log() affiche une information.
+                return renvoie une valeur que le programme
+                peut réutiliser.
+            </div>
+
+            <h3>Exercices</h3>
+            <ol>
+                <li>Crée une fonction qui affiche ton prénom.</li>
+                <li>Crée une fonction qui additionne deux nombres.</li>
+                <li>Crée une fonction qui calcule le carré d'un nombre.</li>
+                <li>Crée une fonction qui retourne le plus grand de deux nombres.</li>
+            </ol>
+        </section>
+
+        <section id="tableaux">
+            <h2>8. Les tableaux</h2>
+
+            <p>
+                Un tableau permet de stocker plusieurs valeurs
+                dans une seule variable.
+            </p>
+
+            <h3>Créer un tableau</h3>
+            <pre><code>let langages = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];</code></pre>
+
+            <h3>Accéder aux éléments</h3>
+            <pre><code>console.log(langages[0]);
+console.log(langages[1]);
+console.log(langages[2]);</code></pre>
+
+            <p>
+                Attention : le premier indice d'un tableau
+                est 0.
+            </p>
+
+            <h3>Ajouter un élément</h3>
+            <pre><code>langages.push("Python");</code></pre>
+
+            <h3>Supprimer le dernier élément</h3>
+            <pre><code>langages.pop();</code></pre>
+
+            <h3>Parcourir un tableau</h3>
+            <pre><code>for (let i = 0; i < langages.length; i++) {
+    console.log(langages[i]);
+}</code></pre>
+
+            <h3>Utiliser for...of</h3>
+            <pre><code>for (let langage of langages) {
+    console.log(langage);
+}</code></pre>
+
+            <h3>Exercices</h3>
+            <ol>
+                <li>Crée un tableau de cinq nombres.</li>
+                <li>Affiche le premier et le dernier élément.</li>
+                <li>Ajoute un élément avec push().</li>
+                <li>Calcule la somme des éléments numériques.</li>
+            </ol>
+        </section>
+
+        <section id="objets">
+            <h2>9. Les objets</h2>
+
+            <p>
+                Un objet permet de regrouper plusieurs informations
+                sous forme de propriétés et de valeurs.
+            </p>
+
+            <h3>Créer un objet</h3>
+            <pre><code>let etudiant = {
+    nom: "Franck",
+    age: 20,
+    ville: "Toliara"
+};</code></pre>
+
+            <h3>Accéder aux propriétés</h3>
+            <pre><code>console.log(etudiant.nom);
+console.log(etudiant.age);
+
+console.log(etudiant["ville"]);</code></pre>
+
+            <h3>Modifier une propriété</h3>
+            <pre><code>etudiant.age = 21;</code></pre>
+
+            <h3>Ajouter une propriété</h3>
+            <pre><code>etudiant.formation = "Développement web";</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un objet produit contenant son nom,
+                son prix et sa catégorie. Affiche ses propriétés.
+            </p>
+        </section>
+
+        <section id="dom">
+            <h2>10. Le DOM</h2>
+
+            <p>
+                DOM signifie Document Object Model.
+                Il permet à JavaScript d'accéder aux éléments HTML
+                et de les modifier.
+            </p>
+
+            <h3>Sélectionner un élément</h3>
+            <pre><code>document.getElementById("titre");
+
+document.querySelector(".carte");
+
+document.querySelectorAll("p");</code></pre>
+
+            <h3>Modifier le texte</h3>
+            <pre><code>let titre = document.getElementById("titre");
+
+titre.textContent = "Nouveau titre";</code></pre>
+
+            <h3>Modifier le style</h3>
+            <pre><code>let titre = document.getElementById("titre");
+
+titre.style.color = "blue";
+titre.style.fontSize = "30px";</code></pre>
+
+            <h3>Modifier une classe</h3>
+            <pre><code>let boite = document.querySelector(".boite");
+
+boite.classList.add("active");
+boite.classList.remove("active");
+boite.classList.toggle("active");</code></pre>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un titre HTML et utilise JavaScript
+                pour modifier son texte et sa couleur.
+            </p>
+        </section>
+
+        <section id="evenements">
+            <h2>11. Les événements</h2>
+
+            <p>
+                Les événements permettent de réagir aux actions
+                de l'utilisateur : clic, saisie, survol, etc.
+            </p>
+
+            <h3>Événement click</h3>
+
+            <p>HTML :</p>
+            <pre><code>&lt;button id="bouton"&gt;Clique ici&lt;/button&gt;</code></pre>
+
+            <p>JavaScript :</p>
+            <pre><code>let bouton = document.getElementById("bouton");
+
+bouton.addEventListener("click", function() {
+    alert("Tu as cliqué !");
+});</code></pre>
+
+            <h3>Événement input</h3>
+            <pre><code>&lt;input type="text" id="nom"&gt;
+&lt;p id="resultat"&gt;&lt;/p&gt;</code></pre>
+
+            <pre><code>let champ = document.getElementById("nom");
+let resultat = document.getElementById("resultat");
+
+champ.addEventListener("input", function() {
+    resultat.textContent = champ.value;
+});</code></pre>
+
+            <h3>Quelques événements</h3>
+            <ul>
+                <li><code>click</code> : clic.</li>
+                <li><code>input</code> : saisie.</li>
+                <li><code>change</code> : changement de valeur.</li>
+                <li><code>submit</code> : envoi de formulaire.</li>
+                <li><code>mouseover</code> : passage du pointeur.</li>
+                <li><code>keydown</code> : touche pressée.</li>
+            </ul>
+
+            <h3>Exercice</h3>
+            <p>
+                Crée un bouton qui affiche un message lorsqu'on clique dessus.
+            </p>
+        </section>
+
+        <section id="projet">
+            <h2>12. Projet pratique : compteur interactif</h2>
+
+            <p>
+                Pour terminer, crée un compteur qui augmente
+                ou diminue lorsqu'on clique sur les boutons.
+            </p>
+
+            <h3>HTML</h3>
+            <pre><code>&lt;h2 id="compteur"&gt;0&lt;/h2&gt;
+
+&lt;button id="diminuer"&gt;-&lt;/button&gt;
+&lt;button id="augmenter"&gt;+&lt;/button&gt;
+
+&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
+
+            <h3>JavaScript</h3>
+            <pre><code>let nombre = 0;
+
+const compteur = document.getElementById("compteur");
+const augmenter = document.getElementById("augmenter");
+const diminuer = document.getElementById("diminuer");
+
+augmenter.addEventListener("click", function() {
+    nombre++;
+    compteur.textContent = nombre;
+});
+
+diminuer.addEventListener("click", function() {
+    nombre--;
+    compteur.textContent = nombre;
+});</code></pre>
+
+            <h3>Défis supplémentaires</h3>
+            <ol>
+                <li>Ajoute un bouton pour remettre le compteur à zéro.</li>
+                <li>Empêche le compteur de devenir négatif.</li>
+                <li>Change la couleur du nombre selon sa valeur.</li>
+            </ol>
+
+            <div class="lesson-note">
+                <strong>Défi final :</strong>
+                Réalise le compteur sans regarder la correction,
+                puis teste-le dans ton navigateur.
+            </div>
+        </section>
+
+        <div class="lesson-note">
+            <h3>Félicitations !</h3>
+            <p>
+                Tu as terminé les trois formations principales
+                de LearnCode : HTML, CSS et JavaScript.
+            </p>
+
+            <a href="exercices.html" class="lc-btn">
+                Passer aux exercices
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="lc-footer">
+    <p>© 2026 LearnCode - Apprendre le développement web</p>
+</footer>
+
+</body>
+</html>
