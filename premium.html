@@ -1,0 +1,1251 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Découvrez les formations Premium LearnCode en HTML, CSS et JavaScript.">
+
+    <meta name="theme-color" content="#0b1020">
+
+    <title>Formations Premium | LearnCode</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .premium-header {
+            background: #111a30;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #26334d;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .premium-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .premium-nav a {
+            color: #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .premium-nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 85px 7%;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e3a5f, #0b1020 65%);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 20px auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 6px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #0ea5e9;
+            color: white;
+            border: 1px solid #0ea5e9;
+        }
+
+        .btn-secondary {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 75px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 35px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: -25px;
+            position: relative;
+        }
+
+        .stat-card {
+            background: #17233b;
+            border: 1px solid #293b5c;
+            border-radius: 12px;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .stat-card h2 {
+            color: #38bdf8;
+            font-size: 30px;
+        }
+
+        .stat-card p {
+            color: #cbd5e1;
+        }
+
+        .objectives {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .objective-card,
+        .module-card,
+        .project-card,
+        .formation-card,
+        .method-card {
+            background: #17233b;
+            border: 1px solid #293b5c;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .objective-card:hover,
+        .module-card:hover,
+        .project-card:hover,
+        .formation-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .objective-card h3,
+        .module-card h3,
+        .project-card h3,
+        .formation-card h3,
+        .method-card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .objective-card p,
+        .module-card p,
+        .project-card p,
+        .method-card p {
+            color: #cbd5e1;
+        }
+
+        .formations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .formation-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formation-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .formation-card p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .formation-card ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .formation-card li {
+            margin-bottom: 5px;
+        }
+
+        .module-number {
+            display: inline-block;
+            background: #0c4a6e;
+            color: #7dd3fc;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .formation-price {
+            color: #38bdf8;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .price-label {
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .formation-card .btn {
+            display: block;
+            text-align: center;
+            margin: 0;
+        }
+
+        .featured {
+            border: 2px solid #0ea5e9;
+            position: relative;
+        }
+
+        .featured-label {
+            display: inline-block;
+            background: #0ea5e9;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+
+        .formation-note {
+            margin-top: 30px;
+            padding: 20px;
+            background: #13243c;
+            border-left: 4px solid #38bdf8;
+            border-radius: 8px;
+            color: #cbd5e1;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .module-card ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+            margin-top: 12px;
+        }
+
+        .module-card li {
+            margin-bottom: 5px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .method {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .method-card {
+            text-align: center;
+        }
+
+        .method-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 65px 20px;
+            background: #13243c;
+            border-radius: 15px;
+            margin-bottom: 65px;
+        }
+
+        .cta p {
+            color: #cbd5e1;
+            margin: 12px 0 20px;
+        }
+
+        .formation-note a {
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #070b16;
+            color: #94a3b8;
+        }
+
+        .footer-links {
+            margin: 12px 0;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            margin: 0 8px;
+        }
+
+        .footer-links a:hover {
+            color: #38bdf8;
+        }
+
+        @media (max-width: 900px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .objectives,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .formations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .premium-header {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 6%;
+            }
+
+            .premium-nav.lc-responsive-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                margin: 0;
+                padding: 10px 0;
+                background: #0b1020;
+                z-index: 1000;
+            }
+
+            .premium-nav.lc-responsive-nav.is-open {
+                display: flex;
+            }
+
+            .premium-nav.lc-responsive-nav a {
+                display: block;
+                width: 100%;
+                padding: 13px;
+                color: #f1f5f9;
+                text-align: center;
+            }
+
+            .premium-nav.lc-responsive-nav a:hover {
+                background: #1e3a5f;
+                color: #38bdf8;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .stats,
+            .objectives,
+            .modules-grid,
+            .projects-grid,
+            .method,
+            .formations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+        }
+        
+/* CORRECTION HERO SUR TELEPHONE */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        padding: 45px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        overflow: hidden;
+    }
+
+    .hero-content,
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(28px, 8vw, 38px);
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero img,
+    .hero-image img {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero {
+        padding: 35px 15px;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+<header class="premium-header">
+    <a href="index.html" class="logo">LearnCode</a>
+
+    <nav class="premium-nav">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html">Cours gratuits</a>
+        <a href="exercices.html">Exercices</a>
+        <a href="premium.html">Premium</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+    <h1>
+        Passe au <span>niveau supérieur</span>
+        en développement web
+    </h1>
+
+    <p>
+        Approfondis tes connaissances en HTML, CSS et JavaScript.
+        Apprends des techniques avancées et réalise des projets
+        pratiques pour développer tes compétences.
+    </p>
+
+    <a href="#formations" class="btn btn-primary">
+        Découvrir les formations
+    </a>
+
+    <a href="cours.html" class="btn btn-secondary">
+        Cours gratuits
+    </a>
+</section>
+
+<!-- STATISTIQUES -->
+
+<section class="container">
+    <div class="stats">
+
+        <div class="stat-card">
+            <h2>10</h2>
+            <p>Modules de formation</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>20+</h2>
+            <p>Exercices pratiques</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>8</h2>
+            <p>Projets pratiques</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>3</h2>
+            <p>Technologies principales</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- POURQUOI CHOISIR LEARNCODE -->
+
+<section class="section">
+    <div class="container">
+
+        <h2 class="section-title">
+            Pourquoi choisir LearnCode Premium ?
+        </h2>
+
+        <p class="section-description">
+            Une formation orientée vers la pratique et la progression.
+        </p>
+
+        <div class="objectives">
+
+            <article class="objective-card">
+                <h3>Approfondir</h3>
+                <p>
+                    Découvre des notions avancées en HTML, CSS
+                    et JavaScript après avoir maîtrisé les bases.
+                </p>
+            </article>
+
+            <article class="objective-card">
+                <h3>Pratiquer</h3>
+                <p>
+                    Entraîne-toi avec des exercices progressifs,
+                    des exemples et des corrections expliquées.
+                </p>
+            </article>
+
+            <article class="objective-card">
+                <h3>Construire</h3>
+                <p>
+                    Mets tes connaissances en pratique en réalisant
+                    des projets web complets.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- FORMATIONS PREMIUM ET TARIFS -->
+
+<section class="section" id="formations">
+    <div class="container">
+
+        <h2 class="section-title">
+            Nos formations Premium
+        </h2>
+
+        <p class="section-description">
+            Choisis une formation séparée ou profite du Pack complet.
+        </p>
+
+        <div class="formations-grid">
+
+            <!-- FORMATION HTML -->
+
+            <article class="formation-card">
+
+                <div class="formation-icon">🌐</div>
+
+                <span class="module-number">FORMATION 01</span>
+
+                <h3>HTML avancé</h3>
+
+                <p>
+                    Apprends à créer des pages web bien structurées,
+                    accessibles et optimisées.
+                </p>
+
+                <ul>
+                    <li>HTML sémantique avancé</li>
+                    <li>Formulaires et validations</li>
+                    <li>Tableaux et éléments multimédias</li>
+                    <li>Accessibilité web</li>
+                    <li>SEO et métadonnées</li>
+                    <li>Images responsives</li>
+                    <li>Exercices pratiques</li>
+                </ul>
+
+                <div class="formation-price">
+                    15 000 Ar
+                    <div class="price-label">
+                        Prix de lancement proposé
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Demander cette formation
+                </a>
+
+            </article>
+
+            <!-- FORMATION CSS -->
+
+            <article class="formation-card">
+
+                <div class="formation-icon">🎨</div>
+
+                <span class="module-number">FORMATION 02</span>
+
+                <h3>CSS avancé</h3>
+
+                <p>
+                    Maîtrise les techniques modernes du CSS
+                    pour créer des interfaces professionnelles
+                    et responsives.
+                </p>
+
+                <ul>
+                    <li>Cascade et spécificité</li>
+                    <li>Variables CSS</li>
+                    <li>Flexbox avancé</li>
+                    <li>CSS Grid avancé</li>
+                    <li>Responsive Design</li>
+                    <li>Animations et transitions</li>
+                    <li>Projets pratiques</li>
+                </ul>
+
+                <div class="formation-price">
+                    20 000 Ar
+                    <div class="price-label">
+                        Prix de lancement proposé
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Demander cette formation
+                </a>
+
+            </article>
+
+            <!-- FORMATION JAVASCRIPT -->
+
+            <article class="formation-card">
+
+                <div class="formation-icon">⚡</div>
+
+                <span class="module-number">FORMATION 03</span>
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Apprends à rendre tes sites interactifs
+                    et à développer des fonctionnalités dynamiques.
+                </p>
+
+                <ul>
+                    <li>Variables, conditions et boucles</li>
+                    <li>Fonctions et tableaux</li>
+                    <li>Objets et méthodes</li>
+                    <li>Manipulation avancée du DOM</li>
+                    <li>Événements et formulaires</li>
+                    <li>LocalStorage</li>
+                    <li>Promises, async/await et Fetch API</li>
+                    <li>Projets pratiques</li>
+                </ul>
+
+                <div class="formation-price">
+                    25 000 Ar
+                    <div class="price-label">
+                        Prix de lancement proposé
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Demander cette formation
+                </a>
+
+            </article>
+
+            <!-- PACK COMPLET -->
+
+            <article class="formation-card featured">
+
+                <span class="featured-label">
+                    OFFRE COMPLÈTE
+                </span>
+
+                <div class="formation-icon">🚀</div>
+
+                <span class="module-number">PACK 04</span>
+
+                <h3>Pack complet HTML + CSS + JavaScript</h3>
+
+                <p>
+                    Apprends les trois technologies essentielles
+                    pour construire des sites web complets.
+                </p>
+
+                <ul>
+                    <li>Formation HTML avancé</li>
+                    <li>Formation CSS avancé</li>
+                    <li>Formation JavaScript</li>
+                    <li>Exercices pratiques</li>
+                    <li>8 projets web</li>
+                    <li>Ressources complémentaires</li>
+                </ul>
+
+                <div class="formation-price">
+                    45 000 Ar
+                    <div class="price-label">
+                        Prix de lancement proposé
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Choisir le Pack complet
+                </a>
+
+            </article>
+
+        </div>
+
+        <div class="formation-note">
+            <strong>Information importante :</strong>
+            Les prix affichés sont des tarifs de lancement proposés.
+            Les paiements et les accès automatiques seront activés
+            après la mise en place du système de paiement sécurisé.
+        </div>
+
+    </div>
+</section>
+</main>
+
+
+<!-- PROGRAMME DE FORMATION -->
+
+<section class="section" id="programme">
+    <div class="container">
+
+        <h2 class="section-title">
+            Programme de formation
+        </h2>
+
+        <p class="section-description">
+            Les 10 modules pour progresser au-delà des bases
+            et maîtriser le développement web.
+        </p>
+
+        <div class="modules-grid">
+
+            <!-- MODULE 1 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 01</span>
+
+                <h3>HTML avancé</h3>
+
+                <p>
+                    Crée des pages web mieux structurées et accessibles.
+                </p>
+
+                <ul>
+                    <li>HTML sémantique avancé</li>
+                    <li>Accessibilité et SEO</li>
+                    <li>Formulaires complexes</li>
+                    <li>Éléments multimédias</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 2 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 02</span>
+
+                <h3>CSS avancé</h3>
+
+                <p>
+                    Maîtrise les propriétés CSS modernes.
+                </p>
+
+                <ul>
+                    <li>Sélecteurs avancés</li>
+                    <li>Variables CSS</li>
+                    <li>Spécificité et cascade</li>
+                    <li>Organisation du code</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 3 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 03</span>
+
+                <h3>Flexbox et Grid avancés</h3>
+
+                <p>
+                    Construis des mises en page modernes.
+                </p>
+
+                <ul>
+                    <li>Flexbox avancé</li>
+                    <li>CSS Grid</li>
+                    <li>Layouts complexes</li>
+                    <li>Alignement et espacements</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 4 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 04</span>
+
+                <h3>Responsive Design avancé</h3>
+
+                <p>
+                    Adapte tes sites à différentes tailles d'écran.
+                </p>
+
+                <ul>
+                    <li>Approche Mobile First</li>
+                    <li>Media queries avancées</li>
+                    <li>Unités fluides</li>
+                    <li>Images et contenus adaptatifs</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 5 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 05</span>
+
+                <h3>Animations et interfaces modernes</h3>
+
+                <p>
+                    Rends tes interfaces plus dynamiques.
+                </p>
+
+                <ul>
+                    <li>Transitions et transformations</li>
+                    <li>Animations avec @keyframes</li>
+                    <li>Menus et composants interactifs</li>
+                    <li>Animations accessibles</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 6 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 06</span>
+
+                <h3>JavaScript intermédiaire</h3>
+
+                <p>
+                    Comprends les mécanismes importants du langage.
+                </p>
+
+                <ul>
+                    <li>Scope et hoisting</li>
+                    <li>Closures et callbacks</li>
+                    <li>Destructuring</li>
+                    <li>Spread, Rest et méthodes de tableaux</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 7 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 07</span>
+
+                <h3>DOM avancé et stockage</h3>
+
+                <p>
+                    Crée des interfaces qui réagissent aux utilisateurs.
+                </p>
+
+                <ul>
+                    <li>Manipulation avancée du DOM</li>
+                    <li>Event delegation</li>
+                    <li>Validation des formulaires</li>
+                    <li>LocalStorage et filtres dynamiques</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 8 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 08</span>
+
+                <h3>JavaScript asynchrone et API</h3>
+
+                <p>
+                    Apprends à récupérer des données externes.
+                </p>
+
+                <ul>
+                    <li>Promises et async/await</li>
+                    <li>Fetch API</li>
+                    <li>JSON et gestion des erreurs</li>
+                    <li>Communication avec des API</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 9 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 09</span>
+
+                <h3>Outils du développeur</h3>
+
+                <p>
+                    Découvre les outils utilisés dans les projets web.
+                </p>
+
+                <ul>
+                    <li>Git et GitHub</li>
+                    <li>Chrome DevTools</li>
+                    <li>Débogage et performance</li>
+                    <li>Accessibilité et sécurité de base</li>
+                </ul>
+            </article>
+
+            <!-- MODULE 10 -->
+
+            <article class="module-card">
+                <span class="module-number">MODULE 10</span>
+
+                <h3>Projets web complets</h3>
+
+                <p>
+                    Combine tes connaissances pour construire des applications.
+                </p>
+
+                <ul>
+                    <li>Dashboard interactif</li>
+                    <li>Catalogue avec filtres</li>
+                    <li>Gestionnaire de tâches</li>
+                    <li>Application utilisant une API</li>
+                </ul>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJETS PRATIQUES -->
+
+<section class="section" id="projets">
+    <div class="container">
+
+        <h2 class="section-title">
+            Projets pratiques
+        </h2>
+
+        <p class="section-description">
+            Huit projets pour mettre en application
+            les connaissances acquises.
+        </p>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+                <h3>01. Dashboard</h3>
+                <p>
+                    Créer une interface de tableau de bord
+                    moderne et responsive.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>02. Catalogue dynamique</h3>
+                <p>
+                    Afficher, rechercher et filtrer des éléments
+                    avec JavaScript.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>03. Task Manager</h3>
+                <p>
+                    Organiser des tâches et les sauvegarder
+                    avec LocalStorage.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>04. Interface de réservation</h3>
+                <p>
+                    Créer une interface avec formulaire
+                    et validation des données.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>05. Application API</h3>
+                <p>
+                    Récupérer et afficher des données
+                    provenant d'une API.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>06. Portfolio avancé</h3>
+                <p>
+                    Construire un portfolio responsive
+                    et interactif.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>07. Site vitrine professionnel</h3>
+                <p>
+                    Créer un site moderne pour présenter
+                    une entreprise.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>08. Application complète</h3>
+                <p>
+                    Combiner HTML, CSS et JavaScript
+                    dans un projet final.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- METHODE D'APPRENTISSAGE -->
+
+<section class="section" id="methode">
+    <div class="container">
+
+        <h2 class="section-title">
+            Apprenez en pratiquant
+        </h2>
+
+        <p class="section-description">
+            Une méthode simple pour progresser
+            et devenir autonome.
+        </p>
+
+        <div class="method">
+
+            <div class="method-card">
+                <div class="method-icon">📘</div>
+
+                <h3>1. Comprendre</h3>
+
+                <p>
+                    Étudie les cours et découvre
+                    les concepts importants du développement web.
+                </p>
+            </div>
+
+            <div class="method-card">
+                <div class="method-icon">💻</div>
+
+                <h3>2. Pratiquer</h3>
+
+                <p>
+                    Résous les exercices et applique
+                    les notions apprises dans des exemples concrets.
+                </p>
+            </div>
+
+            <div class="method-card">
+                <div class="method-icon">🚀</div>
+
+                <h3>3. Réaliser</h3>
+
+                <p>
+                    Construis des projets complets
+                    pour développer ton expérience pratique.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- APPEL À L'ACTION -->
+
+<section class="container">
+
+    <div class="cta">
+
+        <h2>
+            Prêt à développer tes compétences ?
+        </h2>
+
+        <p>
+            Choisis ta formation et commence
+            ton parcours avec LearnCode Premium.
+        </p>
+
+        <a href="#formations" class="btn btn-primary">
+            Voir les formations
+        </a>
+
+        <a href="contact.html" class="btn btn-secondary">
+            Nous contacter
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>LearnCode</h3>
+
+    <p>
+        Apprends, pratique et construis ton avenir dans le web.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="index.html">Accueil</a>
+
+        <a href="cours.html">Cours gratuits</a>
+
+        <a href="exercices.html">Exercices</a>
+
+        <a href="premium.html">Premium</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+    <p>
+        &copy; 2026 LearnCode. Tous droits réservés.
+    </p>
+
+</footer>
+
+<script src="menu.js" defer></script>
+
+</body>
+</html>
